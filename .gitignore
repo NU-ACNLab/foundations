@@ -1,0 +1,8 @@
+*data/*
+*.csv
+*.xlsx
+*.docx
+*.pdf
+*plots/*
+*manuals/*
+*~
