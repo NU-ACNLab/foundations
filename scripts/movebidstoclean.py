@@ -24,7 +24,7 @@ def subj_iterator():
 	for subject in os.listdir(source_dir):
 		#make directory in dest_dir for the new subject
 		participants.append(subject)
-	return(particpants)
+	return(participants)
 		
 
 
