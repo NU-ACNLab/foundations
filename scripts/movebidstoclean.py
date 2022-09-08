@@ -86,7 +86,7 @@ def mini_bid_mover(subject):
 
 def main():
 	#bid_mover()
-	mini_bid_mover("sub-f11202"):
+	mini_bid_mover("sub-f11202")
 
 
 
