@@ -8,49 +8,38 @@ import shutil
 
 
 '''
-    Copies bids files from old Georgia directories to new /studies/foundations data format
+    Iterates through the study folder to create a list of participants
 
             Parameters:
-                    a: file_path, allows us to use the same code to move anat, dwi, and func data over. 
+                    None. 
+
+            Returns:
+                    a: a list of participants
+'''
+def subj_iterator():
+	#intiliaze list of participants 
+	participants = []
+
+	#iterates through subject folders to grab the particpants
+	for subject in os.listdir(directory):
+		#make directory in dest_dir for the new subject
+		participants.append(subject)
+	return(particpants)
+		
+
+
+'''
+    Copies a single particpant's bids files from old Georgia directories to new 
+    /studies/foundations data format. Behavioural data goes into behavioral folder, rather than
+    bids
+
+            Parameters:
+                    a: subject
 
             Returns:
                     none
 '''
-def bid_mover():
-	#here we define where files are coming from and moving to 
-	source_dir = "/projects/b1108/data/Georgia/foundations" 
-	dest_dir = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids"
-	dest_dir_behav ="/projects/b1108/studies/foundations/data/raw/neuroimaging/behavioral"
-
-	#iterates through subject folders to grab the right files
-	for subject in os.listdir(directory):
-		#make directory in dest_dir for the new subject
-		dest_sub_dir = dest_dir + "/" + subject
-		os.mkdir(dest_sub_dir)
-		sub_dir = source_dir + "/" + subject + "/ses-1" #define dest sub directory to iterate through files there
-		print(sub_dir)
-
-		for data_type in os.listdir(sub_dir):
-			for file in os.listdir(sub_dir + "/" + data_type):
-				#try except keeps script from erroring out
-				try:
-					#shutil.copyfile(file, dest_dir) #copies files from source to destination
-					'''
-					if(data_type == "func"):
-						shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "func") #copies files from source to destination
-					elif(data_type == "anat"):
-						shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "func") 
-					elif(data_type == "beh"):
-						shutil.copyfile(file, dest_dir_behav + "/" + subject + "/ses-1/" + "func")
-
-					'''
-					print(file + " copy successful.\n") 
-				except:
-					print(file + " failed to copy.\n")
-
-
-
-def mini_bid_mover(subject):
+def subj_mover(subject):
 	#here we define where files are coming from and moving to 
 	source_dir = "/projects/b1108/data/Georgia/foundations" 
 	dest_dir = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids"
@@ -72,9 +61,9 @@ def mini_bid_mover(subject):
 				if(data_type == "func"):
 					shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "func") #copies files from source to destination
 				elif(data_type == "anat"):
-					shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "func") 
+					shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "anat") 
 				elif(data_type == "beh"):
-					shutil.copyfile(file, dest_dir_behav + "/" + subject + "/ses-1/" + "func")
+					shutil.copyfile(file, dest_dir_behav + "/" + subject + "/ses-1/" + "behavioral")
 
 				'''
 				print(file + " copy successful.\n") 
@@ -85,8 +74,10 @@ def mini_bid_mover(subject):
 
 
 def main():
-	#bid_mover()
-	mini_bid_mover("sub-f11202")
+	partic_list = bid_mover()
+	for partic in partic_list:
+		mini_bid_mover(partic)
+		print(partic)
 
 
 
