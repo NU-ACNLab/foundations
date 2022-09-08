@@ -50,28 +50,29 @@ def subj_mover(subject):
 	dest_sub_dir = dest_dir + "/" + subject
 	if(not(os.path.exists(dest_sub_dir))):
 		os.mkdir(dest_sub_dir)
-	sub_dir = source_dir + "/" + subject + "/ses-1" #define dest sub directory to iterate through files there
+	sub_dir = source_dir + "/" + subject #define dest sub directory to iterate through files there
 	print(sub_dir)
 
 	#need to handle exception for folders that aren't subjects....
-	for data_type in os.listdir(sub_dir):
+	for session in os.listdir(sub_dir):
+		session_dir = source_dir + "/" + subject + "/" + session
+		for data_type in os.listdir(session_dir):
+			for file in os.listdir(session_dir + "/" + data_type):
+				#try except keeps script from erroring out
+				try:
+					#shutil.copyfile(file, dest_dir) #copies files from source to destination
+					'''
+					if(data_type == "func"):
+						shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "func") #copies files from source to destination
+					elif(data_type == "anat"):
+						shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "anat") 
+					elif(data_type == "beh"):
+						shutil.copyfile(file, dest_dir_behav + "/" + subject + "/ses-1/" + "behavioral")
 
-		for file in os.listdir(sub_dir + "/" + data_type):
-			#try except keeps script from erroring out
-			try:
-				#shutil.copyfile(file, dest_dir) #copies files from source to destination
-				'''
-				if(data_type == "func"):
-					shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "func") #copies files from source to destination
-				elif(data_type == "anat"):
-					shutil.copyfile(file, dest_dir + "/" + subject + "/ses-1/" + "anat") 
-				elif(data_type == "beh"):
-					shutil.copyfile(file, dest_dir_behav + "/" + subject + "/ses-1/" + "behavioral")
-
-				'''
-				print(file + " copy successful.\n") 
-			except:
-				print(file + " failed to copy.\n")	
+					'''
+					print(file + " copy successful.\n") 
+				except:
+					print(file + " failed to copy.\n")	
 
 
 
