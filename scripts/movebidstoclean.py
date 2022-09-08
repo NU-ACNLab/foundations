@@ -48,7 +48,8 @@ def subj_mover(subject):
 
 	#make directory in dest_dir for the new subject
 	dest_sub_dir = dest_dir + "/" + subject
-	os.mkdir(dest_sub_dir)
+	if(not(os.path.exists(dest_sub_dir))):
+		os.mkdir(dest_sub_dir)
 	sub_dir = source_dir + "/" + subject + "/ses-1" #define dest sub directory to iterate through files there
 	print(sub_dir)
 
