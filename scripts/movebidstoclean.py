@@ -19,9 +19,9 @@ import shutil
 def subj_iterator():
 	#intiliaze list of participants 
 	participants = []
-
+	source_dir = "/projects/b1108/data/Georgia/foundations" 
 	#iterates through subject folders to grab the particpants
-	for subject in os.listdir(directory):
+	for subject in os.listdir(source_dir):
 		#make directory in dest_dir for the new subject
 		participants.append(subject)
 	return(particpants)
