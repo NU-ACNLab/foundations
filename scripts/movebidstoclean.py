@@ -52,7 +52,9 @@ def subj_mover(subject):
 	sub_dir = source_dir + "/" + subject + "/ses-1" #define dest sub directory to iterate through files there
 	print(sub_dir)
 
+	#need to handle exception for folders that aren't subjects....
 	for data_type in os.listdir(sub_dir):
+
 		for file in os.listdir(sub_dir + "/" + data_type):
 			#try except keeps script from erroring out
 			try:
@@ -76,8 +78,9 @@ def subj_mover(subject):
 def main():
 	partic_list = subj_iterator()
 	for partic in partic_list:
-		subj_mover(partic)
-		print(partic)
+		if(partic[0:3] == "sub"):
+			subj_mover(partic)
+			print(partic)
 
 
 
