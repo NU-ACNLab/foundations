@@ -74,9 +74,9 @@ def subj_mover(subject):
 
 
 def main():
-	partic_list = bid_mover()
+	partic_list = subj_iterator()
 	for partic in partic_list:
-		mini_bid_mover(partic)
+		subj_mover((partic)
 		print(partic)
 
 
