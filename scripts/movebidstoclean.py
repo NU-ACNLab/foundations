@@ -1,10 +1,11 @@
 """filemover.py: Copies bids files. Is called by slurm script"""
 
-__author__      = "Katharina Seitz"
-__date__   = "9/8/22"
+__author__   = "Katharina Seitz"
+__date__     = "9/8/22"
 
 import os
 import shutil
+
 
 
 '''
@@ -34,7 +35,7 @@ def subj_iterator():
     bids
 
             Parameters:
-                    a: subject
+                    a: subject id 
 
             Returns:
                     none
@@ -53,7 +54,7 @@ def subj_mover(subject):
 	sub_dir = source_dir + "/" + subject #define dest sub directory to iterate through files there
 	print(sub_dir)
 
-	#need to handle exception for folders that aren't subjects....
+	
 	for session in os.listdir(sub_dir):
 		session_dir = source_dir + "/" + subject + "/" + session
 		for data_type in os.listdir(session_dir):
@@ -80,6 +81,7 @@ def subj_mover(subject):
 def main():
 	partic_list = subj_iterator()
 	for partic in partic_list:
+		#checks to make sure it's a participant, not something else. 
 		if(partic[0:3] == "sub"):
 			subj_mover(partic)
 			print(partic)
