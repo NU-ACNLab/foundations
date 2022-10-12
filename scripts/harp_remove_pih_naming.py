@@ -64,10 +64,11 @@ def rename_partic():
 
 
 def main():
-   try:
-        rename_partic()
-    except:
-        print(participant + " FAILED and I AM MAD >:-(")
+    rename_partic()
+   #try:
+       #rename_partic()
+    #except:
+   #     print(participant + " FAILED and I AM MAD >:-(")
 
 if __name__ == "__main__":
     main()
