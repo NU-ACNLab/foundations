@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os 
+import glob
 
 
 directory = "/projects/b1108/data/Georgia/foundations/sub-f10792_TESTKAT/ses-1"
