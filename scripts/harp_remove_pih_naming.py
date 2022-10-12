@@ -1,11 +1,10 @@
 import os 
 
 
-directory = "/projects/b1108/data/Georgia/foundations/sub-f10792/ses-1"
+directory = "/projects/b1108/data/Georgia/foundations/sub-f10792_TESTKAT/ses-1"
 participant = "f10792"
 
-def rename_partic:
-    #rename t1000--FMAP1--GR--5_ph sub-t1000_ses-1_phase1 *  
+def rename_partic(): 
     files = glob.glob(participant + "--FMAP1--GR--?_ph*")
     for(file in files):
         parts = file.split(".")
