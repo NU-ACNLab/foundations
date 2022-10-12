@@ -10,7 +10,8 @@ def rename_partic():
     files = glob.glob(directory + "/" + participant + "--FMAP1--GR--?_ph*")
     for file in files:
         parts = file.split(".")
-        new_name = participant + "_ses-1_phase1." + parts[1]
+        new_name = "sub-" + participant + "_ses-1_phase1." + parts[1]
+        print(directory + "/" + file)
         os.rename(directory + "/" + file, directory + "/" + new_name) 
     files = glob.glob(directory + "/" + participant + "--FMAP2--GR--?_ph*")
     for file in files:
