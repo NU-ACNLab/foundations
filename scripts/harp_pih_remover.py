@@ -3,8 +3,8 @@ import glob
 import os
 
 #set directory and participant for which we will rename files
-directory = "/projects/b1108/data/Georgia/foundations/sub-f10792_TESTKAT/ses-1"
-participant = "f10792"
+directory = "/projects/b1108/data/Georgia/foundations/sub-f10182_TESTKAT/ses-1"
+participant = "f10182"
 
 
 '''
@@ -101,6 +101,7 @@ def rename_partic(participant, directory):
         new_name = "sub-" + participant + "_ses-1_task-rest_run-04_bold." + parts[1]
         print(directory + "/" + new_name)
         os.rename(file, directory + "/" + new_name) 
+    #T1W
     files = glob.glob(directory + "/" + participant + "--T1w--GR--*")
     for file in files:
         parts = file.split(".", 1)
@@ -126,7 +127,7 @@ def move_to_folders(participant, directory):
         os.rename(file, directory + "/anat/" + parts[-1])
     #move fmap files
     fmap_files = glob.glob(directory + "/sub*")
-    for file in func_files:
+    for file in fmap_files:
         print(file)
         parts = file.split("/")
         os.rename(file, directory + "/fmap/" + parts[-1])
