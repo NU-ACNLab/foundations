@@ -109,17 +109,20 @@ def move_to_folders(participant, directory):
     func_pattern = "sub-"+ participant + "_ses-1_task*"
     func_files = glob.glob(directory + "/" + func_pattern)
     for file in func_files:
+        print(file)
         parts = file.split("/")
         os.rename(file, directory + "/func/" + parts[-1])
     #move anatomical files
     anat_pattern = "sub-"+ participant + "_ses-1_T1w*"
     anat_files = glob.glob(directory + "/" + anat_pattern)
     for file in anat_files:
+        print(file)
         parts = file.split("/")
         os.rename(file, directory + "/anat/" + parts[-1])
     #move fmap files
     fmap_files = glob.glob(directory + "/sub*")
     for file in func_files:
+        print(file)
         parts = file.split("/")
         os.rename(file, directory + "/fmap/" + parts[-1])
 
