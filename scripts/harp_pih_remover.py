@@ -6,7 +6,11 @@ import os
 directory = "/projects/b1108/data/Georgia/foundations/sub-f10182_TESTKAT/ses-1"
 participant = "f10182"
 
-
+def remove_name(participant, directory):
+    for file in os.listdir(directory):
+        parts = file.split("--", 1)
+        new_name = participant + "--" + parts[-1]
+        os.rename(file, directory + "/" + new_name) 
 '''
     Checks for func, beh, anat, and fmap directories
     Creates them, if they do not exist.
@@ -133,6 +137,9 @@ def move_to_folders(participant, directory):
         os.rename(file, directory + "/fmap/" + parts[-1])
 
 def main():
+    remove_name(participant, directory)
+    makedir(participant, directory)
+    rename_partic(participant, directory)
     move_to_folders(participant, directory)
     #try:
         #makedir(participant, directory)
