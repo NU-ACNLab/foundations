@@ -106,13 +106,13 @@ def rename_partic(participant, directory):
 
 def move_to_folders(participant, directory):
     #move functional files
-    func_pattern = "sub-"+ particpant + "_ses-1_task*"
+    func_pattern = "sub-"+ participant + "_ses-1_task*"
     func_files = glob.glob(directory + "/" + func_pattern)
     for file in func_files:
         parts = file.split("/")
         os.rename(file, directory + "/func/" + parts[-1])
     #move anatomical files
-    anat_pattern = "sub-"+ particpant + "_ses-1_T1w*"
+    anat_pattern = "sub-"+ participant + "_ses-1_T1w*"
     anat_files = glob.glob(directory + "/" + anat_pattern)
     for file in anat_files:
         parts = file.split("/")
