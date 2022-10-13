@@ -3,7 +3,7 @@ import glob
 import os
 
 directory = "/projects/b1108/data/Georgia/foundations/sub-f10792_TESTKAT/ses-1"
-participant = ""
+participant = "f10792"
 
 def rename_partic(): 
     files = glob.glob(directory + "/" + participant + "--FMAP1--GR--?_ph*")
