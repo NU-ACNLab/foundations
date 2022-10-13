@@ -125,12 +125,12 @@ def move_to_folders(participant, directory):
 
 def main():
     move_to_folders(participant, directory)
-    try:
+    #try:
         #makedir(participant, directory)
         #rename_partic(participant, directory)
         #move_to_folders(participant, directory)
-    except:
-        print("Rename files failed for " + participant)
+    #except:
+        #print("Rename files failed for " + participant)
 
 if __name__ == "__main__":
     main()
