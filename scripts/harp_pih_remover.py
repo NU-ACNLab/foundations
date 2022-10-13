@@ -10,9 +10,7 @@ def remove_name(participant, directory):
     for file in os.listdir(directory):
         parts = file.split("--", 1)
         new_name = participant + "--" + parts[-1]
-        print(file)
-        print(directory + "/" + new_name)
-        os.rename(file, directory + "/" + new_name) 
+        os.rename(directory + "/" + file, directory + "/" + new_name) 
 '''
     Checks for func, beh, anat, and fmap directories
     Creates them, if they do not exist.
