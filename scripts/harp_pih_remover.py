@@ -124,10 +124,11 @@ def move_to_folders(participant, directory):
         os.rename(file, directory + "/fmap/" + parts[-1])
 
 def main():
+    move_to_folders(participant, directory)
     try:
-        makedir(participant, directory)
-        rename_partic(participant, directory)
-        move_to_folders(participant, directory)
+        #makedir(participant, directory)
+        #rename_partic(participant, directory)
+        #move_to_folders(participant, directory)
     except:
         print("Rename files failed for " + participant)
 
