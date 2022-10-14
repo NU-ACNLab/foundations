@@ -1,10 +1,21 @@
 # -*- coding: utf-8 -*-
 import glob
 import os
+import sys
 
 #set directory and participant for which we will rename files
-directory = "/projects/b1108/data/Georgia/foundations/sub-f10182_TESTKAT/ses-1"
-participant = "f10182"
+#directory = "/projects/b1108/data/Georgia/foundations/sub-f10182_TESTKAT/ses-1"
+#participant = "f10182"
+partic_path_dict = {}
+
+def list_participants():
+    work_dir = "/projects/b1108/data/Georgia/foundations/derivatives/work_COPY"
+        for partic in os.listdir(work_dir):
+            fpartic = partic.split("-")[1]
+            path = "/projects/b1108/data/Georgia/foundations/derivatives/work_COPY/" \
+                    + partic + "/ses-1"
+    partic_path_dict[fpartic] = path
+        
 
 def remove_name(participant, directory):
     for file in os.listdir(directory):
@@ -30,7 +41,6 @@ def makedir(participant, directory):
         os.mkdir(directory + "/fmap/")
     if(not os.path.exists(directory + "/beh/")):
         os.mkdir(directory + "/beh/")
-
 '''
     Renames files all per the file renaming document from Nina
             Parameters:
@@ -113,7 +123,6 @@ def rename_partic(participant, directory):
         print(directory + "/" + new_name)
         os.rename(file, directory + "/" + new_name) 
     
-
 def move_to_folders(participant, directory):
     #move functional files
     func_pattern = "sub-"+ participant + "_ses-1_task*"
@@ -136,11 +145,20 @@ def move_to_folders(participant, directory):
         parts = file.split("/")
         os.rename(file, directory + "/fmap/" + parts[-1])
 
+
+
 def main():
-    remove_name(participant, directory)
-    makedir(participant, directory)
-    rename_partic(participant, directory)
-    move_to_folders(participant, directory)
+    try:
+        list_participants()
+    except:
+        print("Partic dict failed to be created.")
+        sys.exit()
+    for key, value in thisdict.items():
+        remove_name(key, value)
+        makedir(key, value)
+        rename_partic(key, value)
+        move_to_folders(key, value)
+
     #try:
         #makedir(participant, directory)
         #rename_partic(participant, directory)
