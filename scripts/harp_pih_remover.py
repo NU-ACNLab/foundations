@@ -10,10 +10,10 @@ partic_path_dict = {}
 
 def list_participants():
     work_dir = "/projects/b1108/data/Georgia/foundations/derivatives/work_COPY"
-        for partic in os.listdir(work_dir):
-            fpartic = partic.split("-")[1]
-            path = "/projects/b1108/data/Georgia/foundations/derivatives/work_COPY/" \
-                    + partic + "/ses-1"
+    for partic in os.listdir(work_dir):
+        fpartic = partic.split("-")[1]
+        path = "/projects/b1108/data/Georgia/foundations/derivatives/work_COPY/" \
+                + partic + "/ses-1"
     partic_path_dict[fpartic] = path
         
 
