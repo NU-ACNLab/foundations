@@ -1,89 +1,14 @@
-# -*- coding: utf-8 -*-
-import glob
-import os
+#!/bin/bash
+#SBATCH --account=b1108## Required: your allocation/account name, i.e. eXXXX, pXXXX or bXXXX
+#SBATCH --partition=normal ## Required: (buyin, short, normal, long, gengpu, genhimem, etc)
+#SBATCH --time=02:10:00 ## Required: How long will the job need to run (remember different partitions have restrictions on this parameter)
+#SBATCH --nodes=1 ## how many computers/nodes do you need (no default)
+#SBATCH --ntasks-per-node=1 ## how many cpus or processors do you need on per computer/node (default value 1)
+#SBATCH --mem=1G ## how much RAM do you need per computer/node (this affects your FairShare score so be careful to not ask for more than you need))
+#SBATCH --job-name=sample_job ## When you run squeue -u  this is how you can identify the job
+#SBATCH --output=output.log ## standard out and standard error goes to this file
 
-directory = "/projects/b1108/data/Georgia/foundations/sub-f10792_TESTKAT/ses-1"
-participant = ""
+# A regular comment in Bash
 
-def rename_partic(): 
-    files = glob.glob(directory + "/" + participant + "--FMAP1--GR--?_ph*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_phase1." + parts[1]
-        print(directory + "/" + new_name)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--FMAP2--GR--?_ph*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_phase2." + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--FMAP1--GR--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_magnitude1" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--FMAP2--GR--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_magnitude2" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--MID1--EP_RM--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_task-mid_run-01_bold" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--MID2--EP_RM--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_task-mid_run-02_bold" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name)  
-    files = glob.glob(directory + "/" + participant + "REST1--EP_RM--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_task-rest_run-01_bold" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--REST2--EP_RM--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_task-rest_run-02_bold" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name)  
-    files = glob.glob(directory + "/" + participant + "--REST3--EP_RM--11*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "__ses-1_task-rest_run-03_bold" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--REST4--EP_RM--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_task-rest_run-04_bold" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-    files = glob.glob(directory + "/" + participant + "--T1w--GR--*")
-    for file in files:
-        parts = file.split(".")
-        new_name = "sub-" + participant + "_ses-1_T1w" + parts[1]
-        print(directory + "/" + file)
-        os.rename(file, directory + "/" + new_name) 
-
-
-def main():
-    rename_partic()
-   #try:
-       #rename_partic()
-    #except:
-   #     print(participant + " FAILED and I AM MAD >:-(")
-
-if __name__ == "__main__":
-    main()
-
-
-
-
+python --version
+python harp_pih_remover.py
