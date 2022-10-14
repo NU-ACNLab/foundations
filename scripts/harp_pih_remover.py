@@ -153,7 +153,7 @@ def main():
     except:
         print("Partic dict failed to be created.")
         sys.exit()
-    for key, value in thisdict.items():
+    for key, value in partic_path_dict.items():
         remove_name(key, value)
         makedir(key, value)
         rename_partic(key, value)
