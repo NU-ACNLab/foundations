@@ -3,20 +3,30 @@ import glob
 import os
 import sys
 
-#set directory and participant for which we will rename files
-#directory = "/projects/b1108/data/Georgia/foundations/sub-f10182_TESTKAT/ses-1"
-#participant = "f10182"
-partic_path_dict = {}
 
+partic_path_dict = {}
+'''
+    Creates a dictionary of participants and file paths.
+            Parameters:
+                    a) None
+            Returns:
+                    none
+'''
 def list_participants():
-    work_dir = "/projects/b1108/data/Georgia/foundations/work_COPY"
+    work_dir = "/projects/b1108/data/Georgia/foundations/work"
     for partic in os.listdir(work_dir):
         fpartic = partic.split("-")[1]
-        path = "/projects/b1108/data/Georgia/foundations/work_COPY/" \
-                + partic + "/ses-1"
+        path = work_dir + "/" + partic + "/ses-1"
         partic_path_dict[fpartic] = path
         
-
+'''
+    Removes participant name from file names. 
+            Parameters:
+                    a) participant in f1XXXX format
+                    b) directory up to and inclduding ses-1
+            Returns:
+                    none
+'''
 def remove_name(participant, directory):
     for file in os.listdir(directory):
         parts = file.split("--", 1)
@@ -50,6 +60,7 @@ def makedir(participant, directory):
                     none
 '''
 def rename_partic(participant, directory): 
+    #search using glob on the pattern that Nina in the doc 
     files = glob.glob(directory + "/" + participant + "--FMAP1--GR--?_ph*")
     for file in files:
         parts = file.split(".", 1)
@@ -119,10 +130,18 @@ def rename_partic(participant, directory):
     files = glob.glob(directory + "/" + participant + "--T1w--GR--*")
     for file in files:
         parts = file.split(".", 1)
-        new_name = "sub-" + participant + "_ses-1_T1w." + parts[1]
+        new_name = "sub-" + participant + "_ses-1_run-1_T1w." + parts[1]
         print(directory + "/" + new_name)
         os.rename(file, directory + "/" + new_name) 
-    
+
+'''
+    Moves files to their respective sub folders
+            Parameters:
+                    a) participant in f1XXXX format
+                    b) directory up to and inclduding ses-1
+            Returns:
+                    none
+'''   
 def move_to_folders(participant, directory):
     #move functional files
     func_pattern = "sub-"+ participant + "_ses-1_task*"
@@ -132,7 +151,7 @@ def move_to_folders(participant, directory):
         parts = file.split("/")
         os.rename(file, directory + "/func/" + parts[-1])
     #move anatomical files
-    anat_pattern = "sub-"+ participant + "_ses-1_T1w*"
+    anat_pattern = "sub-"+ participant + "_ses-1_run-1_T1w*"
     anat_files = glob.glob(directory + "/" + anat_pattern)
     for file in anat_files:
         print(file)
