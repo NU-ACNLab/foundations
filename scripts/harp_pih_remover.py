@@ -167,6 +167,9 @@ def move_to_folders(participant, directory):
 
 
 def main():
+    #asks user to input a directory
+    path = input("Please enter the directory, without quotes:\n")
+    
     try:
         list_participants()
     except:
