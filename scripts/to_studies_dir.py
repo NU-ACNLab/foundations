@@ -14,7 +14,7 @@ def mover():
     for partic in os.listdir(work_dir):
         if(partic[0:5] == "sub-f"):
             wd = work_dir + "/" + partic + "/ses-1/"
-            for folder in os.listdir(wd)
+            for folder in os.listdir(wd): 
              #checks to make sure it's a participant
                 try:
                     source = wd + "/" + folder
