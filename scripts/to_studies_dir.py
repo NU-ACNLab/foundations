@@ -16,6 +16,8 @@ def mover():
             wd = work_dir + "/" + partic + "/ses-1/"
             for folder in os.listdir(wd): 
              #checks to make sure it's a participant
+                print(wd)
+                print (folder)
                 try:
                     source = wd + folder
                     if(folder == "beh"):
