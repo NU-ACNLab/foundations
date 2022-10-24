@@ -17,7 +17,7 @@ def mover():
             for folder in os.listdir(wd): 
              #checks to make sure it's a participant
                 try:
-                    source = wd + "/" + folder
+                    source = wd + folder
                     if(folder == "beh"):
                         dest = "/projects/b1108/studies/foundations/data/raw/neuroimaging/behavioral/"\
                             + partic + "/ses-1/" + folder
