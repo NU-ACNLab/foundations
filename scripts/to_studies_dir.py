@@ -22,10 +22,12 @@ def mover():
                         dest = "/projects/b1108/studies/foundations/data/raw/neuroimaging/behavioral/"\
                             + partic + "/ses-1/" + folder
                         shutil.copytree(source, dest) 
+                        print("Copied " + partic + " " + folder)
                     else:
                         dest = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/"\
                              + partic + "/ses-1/" + folder
                         shutil.copytree(source, dest) 
+                        print("Copied " + partic + " " + folder)
                 except:
                     print("Unable to copy " + partic)
 
