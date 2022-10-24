@@ -9,21 +9,29 @@ import shutil
             Returns:
                     none
 '''
-def list_participants():
+def mover():
     work_dir = "/projects/b1108/data/Georgia/foundations/"
     for partic in os.listdir(work_dir):
-        #checks to make sure it's a participant
         if(partic[0:5] == "sub-f"):
-            try:
-                wd = work_dir + "/" + partic + "/ses-1/"
-                dest = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/" + partic + "/ses-1/"
-                shutil.copytree(wd, dest) 
-            except:
-                print("Unable to copy " + partic)
+            wd = work_dir + "/" + partic + "/ses-1/"
+            for folder in os.listdir(wd)
+             #checks to make sure it's a participant
+                try:
+                    source = wd + "/" + folder
+                    if(folder == "beh"):
+                        dest = "/projects/b1108/studies/foundations/data/raw/neuroimaging/behavioral/"\
+                            + partic + "/ses-1/" + folder
+                        shutil.copytree(source, dest) 
+                    else:
+                        dest = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/"\
+                             + partic + "/ses-1/" + folder
+                        shutil.copytree(source, dest) 
+                except:
+                    print("Unable to copy " + partic)
 
 
 def main():   
-    list_participants()
+    mover()
 
 
 if __name__ == "__main__":
