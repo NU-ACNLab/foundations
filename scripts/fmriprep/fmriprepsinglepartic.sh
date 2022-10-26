@@ -11,4 +11,9 @@ module load singularity/latest
 echo "modules loaded" 
 echo "beginning preprocessing"
 
-singularity run --cleanenv -B /projects/b1108:/projects/b1108 /projects/b1108/software/singularity_images/fmriprep-20.2.3.simg /projects/b1108/data/Georgia/foundations /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep participant --participant-label ${1} --fs-license-file /projects/b1108/software/freesurfer_license/license.txt --fs-no-reconall -w /projects/b1108/studies/foundations/data/processed/neuroimaging/work
+singularity run --cleanenv -B /projects/b1108:/projects/b1108 \
+/projects/b1108/software/singularity_images/fmriprep-20.2.3.simg \
+/projects/b1108/studies/foundations/data \
+/projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep participant \
+--participant-label ${1} --fs-license-file /projects/b1108/software/freesurfer_license/license.txt \
+--fs-no-reconall -w /projects/b1108/studies/foundations/data/processed/neuroimaging/work
