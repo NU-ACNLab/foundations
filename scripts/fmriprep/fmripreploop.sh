@@ -1,5 +1,14 @@
 #!/usr/bin/bash
 
+#SBATCH -A p31833
+#SBATCH -p normal
+#SBATCH -t 48:00:00
+#SBATCH --mem=64G
+#SBATCH -J fmriprep_single_sub
+
+
+#!/usr/bin/bash
+
 Usage() {
         echo ‘Usage: WIN_dsi_trk_loop <subject list>’
         exit 0
