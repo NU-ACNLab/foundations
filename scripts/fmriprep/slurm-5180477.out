@@ -1,0 +1,281 @@
+modules loaded
+beginning preprocessing
+bids-validator@1.4.0
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+
+        [34m[4mSummary:[24m[39m                   [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        2383 Files, 68.84GB        mid                     T1w                   
+        111 - Subjects             rest                    bold                  
+        1 - Session                                        events                
+                                                           fieldmap              
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+
+You are using fMRIPrep-20.2.3, and a newer version of fMRIPrep is available: 22.0.2.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+221026-15:14:36,696 nipype.workflow IMPORTANT:
+	 
+    Running fMRIPREP version 20.2.3:
+      * BIDS dataset path: /projects/b1108/studies/foundations/data/raw/neuroimaging/bids.
+      * Participant list: ['f10012'].
+      * Run identifier: 20221026-151319_0d7b4ea3-cf8e-4145-96fb-bac6743cecb7.
+      * Output spaces: MNI152NLin2009cAsym:res-native.
+      * Pre-run FreeSurfer's SUBJECTS_DIR: /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep/freesurfer.
+221026-15:14:38,153 nipype.workflow INFO:
+	 No single-band-reference found for sub-f10012_ses-1_task-mid_run-01_bold.nii.gz.
+221026-15:14:39,203 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+221026-15:14:39,374 nipype.workflow INFO:
+	 No single-band-reference found for sub-f10012_ses-1_task-mid_run-02_bold.nii.gz.
+221026-15:14:40,183 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+221026-15:14:40,369 nipype.workflow INFO:
+	 No single-band-reference found for sub-f10012_ses-1_task-rest_run-01_bold.nii.gz.
+221026-15:14:41,134 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+221026-15:14:41,348 nipype.workflow INFO:
+	 No single-band-reference found for sub-f10012_ses-1_task-rest_run-02_bold.nii.gz.
+221026-15:14:42,119 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+221026-15:14:42,395 nipype.workflow INFO:
+	 No single-band-reference found for sub-f10012_ses-1_task-rest_run-03_bold.nii.gz.
+221026-15:14:43,175 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+221026-15:14:43,387 nipype.workflow INFO:
+	 No single-band-reference found for sub-f10012_ses-1_task-rest_run-04_bold.nii.gz.
+221026-15:14:44,170 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+221026-15:14:52,62 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 1325 nodes built successfully.
+221026-15:15:08,515 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+221026-15:17:02,658 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_04_wf.bold_hmc_wf.fsl2itk" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_04_wf/bold_hmc_wf/fsl2itk".
+221026-15:17:02,662 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_03_wf.bold_hmc_wf.fsl2itk" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_03_wf/bold_hmc_wf/fsl2itk".
+221026-15:17:02,665 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_mid_run_02_wf.bold_hmc_wf.fsl2itk" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_mid_run_02_wf/bold_hmc_wf/fsl2itk".
+221026-15:17:02,667 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_02_wf.bold_hmc_wf.fsl2itk" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_02_wf/bold_hmc_wf/fsl2itk".
+221026-15:17:02,668 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_01_wf.bold_hmc_wf.fsl2itk" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_01_wf/bold_hmc_wf/fsl2itk".
+221026-15:17:03,414 nipype.workflow INFO:
+	 [Node] Cached "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_02_wf.bold_hmc_wf.fsl2itk" - collecting precomputed outputs
+221026-15:17:03,415 nipype.workflow INFO:
+	 [Node] "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_02_wf.bold_hmc_wf.fsl2itk" found cached.
+221026-15:17:03,417 nipype.workflow INFO:
+	 [Node] Cached "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_01_wf.bold_hmc_wf.fsl2itk" - collecting precomputed outputs
+221026-15:17:03,417 nipype.workflow INFO:
+	 [Node] "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_01_wf.bold_hmc_wf.fsl2itk" found cached.
+221026-15:17:03,423 nipype.workflow INFO:
+	 [Node] Cached "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_04_wf.bold_hmc_wf.fsl2itk" - collecting precomputed outputs
+221026-15:17:03,423 nipype.workflow INFO:
+	 [Node] "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_04_wf.bold_hmc_wf.fsl2itk" found cached.
+221026-15:17:03,425 nipype.workflow INFO:
+	 [Node] Cached "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_03_wf.bold_hmc_wf.fsl2itk" - collecting precomputed outputs
+221026-15:17:03,425 nipype.workflow INFO:
+	 [Node] "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_03_wf.bold_hmc_wf.fsl2itk" found cached.
+221026-15:17:03,431 nipype.workflow INFO:
+	 [Node] Cached "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_mid_run_02_wf.bold_hmc_wf.fsl2itk" - collecting precomputed outputs
+221026-15:17:03,432 nipype.workflow INFO:
+	 [Node] "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_mid_run_02_wf.bold_hmc_wf.fsl2itk" found cached.
+221026-15:17:06,755 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_mid_run_01_wf.bold_hmc_wf.fsl2itk" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_mid_run_01_wf/bold_hmc_wf/fsl2itk".
+exception calling callback for <Future at 0x2b41e7278da0 state=finished raised FileNotFoundError>
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 493, in run
+    emptydirs(outdir, noexist_ok=True)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/utils/filemanip.py", line 792, in emptydirs
+    raise ex
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/utils/filemanip.py", line 781, in emptydirs
+    shutil.rmtree(path)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 485, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 427, in _rmtree_safe_fd
+    onerror(os.rmdir, fullname, sys.exc_info())
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 425, in _rmtree_safe_fd
+    os.rmdir(entry.name, dir_fd=topfd)
+OSError: [Errno 39] Directory not empty: 'tmp-szjw74li'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/concurrent/futures/process.py", line 232, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 70, in run_node
+    result["result"] = node.result
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 217, in result
+    op.join(self.output_dir(), "result_%s.pklz" % self.name)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/utils.py", line 291, in load_resultfile
+    raise FileNotFoundError(results_file)
+FileNotFoundError: /projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_mid_run_01_wf/bold_hmc_wf/fsl2itk/result_fsl2itk.pklz
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/concurrent/futures/_base.py", line 324, in _invoke_callbacks
+    callback(self)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 159, in _async_callback
+    result = args.result()
+  File "/usr/local/miniconda/lib/python3.7/concurrent/futures/_base.py", line 425, in result
+    return self.__get_result()
+  File "/usr/local/miniconda/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+FileNotFoundError: /projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_mid_run_01_wf/bold_hmc_wf/fsl2itk/result_fsl2itk.pklz
+221026-15:17:08,161 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.anat_preproc_wf.brain_extraction_wf.lap_target" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/anat_preproc_wf/brain_extraction_wf/lap_target".
+221026-15:17:08,271 nipype.workflow INFO:
+	 [Node] Running "lap_target" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-f10012_ses-1_run-1_T1w_maths_corrected_maths.nii.gz Laplacian /projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-f10012_ses-1_run-1_T1w_maths_corrected.nii.gz 1.5 1
+221026-15:17:13,549 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_04_wf.bold_bold_trans_wf.bold_transform" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_04_wf/bold_bold_trans_wf/bold_transform".
+221026-15:17:13,585 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_03_wf.bold_bold_trans_wf.bold_transform" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_03_wf/bold_bold_trans_wf/bold_transform".
+221026-15:17:13,587 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_02_wf.bold_bold_trans_wf.bold_transform" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_02_wf/bold_bold_trans_wf/bold_transform".
+221026-15:17:13,602 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_rest_run_01_wf.bold_bold_trans_wf.bold_transform" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_01_wf/bold_bold_trans_wf/bold_transform".
+221026-15:17:20,532 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_f10012_wf.func_preproc_ses_1_task_mid_run_02_wf.bold_bold_trans_wf.bold_transform" in "/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_mid_run_02_wf/bold_bold_trans_wf/bold_transform".
+221026-15:17:21,155 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+221026-15:17:24,622 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+221026-15:17:26,652 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+221026-15:17:26,900 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+221026-15:17:28,871 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+221026-15:20:47,417 nipype.workflow ERROR:
+	 Node lap_target failed to run on host qnode0415.
+221026-15:20:47,708 nipype.workflow ERROR:
+	 Saving crash info to /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep/fmriprep/sub-f10012/log/20221026-151319_0d7b4ea3-cf8e-4145-96fb-bac6743cecb7/crash-20221026-152047-sir8526-lap_target-741194f6-431a-4d3f-b88d-69074436b05e.txt
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 557, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/anat_preproc_wf/brain_extraction_wf/lap_target/_0x633dcb6351a2b9b0d009cc7c994d0ae9_unfinished.json' -> '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/anat_preproc_wf/brain_extraction_wf/lap_target/_0x633dcb6351a2b9b0d009cc7c994d0ae9.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 531, in run
+    shutil.move(hashfile_unfinished, hashfile_unfinished.replace("_unfinished", ""))
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 571, in move
+    copy_function(src, real_dst)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/anat_preproc_wf/brain_extraction_wf/lap_target/_0x633dcb6351a2b9b0d009cc7c994d0ae9_unfinished.json'
+
+221026-16:08:00,430 nipype.workflow ERROR:
+	 Node bold_transform failed to run on host qnode0415.
+221026-16:08:00,499 nipype.workflow ERROR:
+	 Saving crash info to /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep/fmriprep/sub-f10012/log/20221026-151319_0d7b4ea3-cf8e-4145-96fb-bac6743cecb7/crash-20221026-160800-sir8526-bold_transform-0fbf5a47-4b9d-4042-8df4-fb5770f72617.txt
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 557, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_02_wf/bold_bold_trans_wf/bold_transform/_0xf79d226779bd62411a32bd58b4abc2d5_unfinished.json' -> '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_02_wf/bold_bold_trans_wf/bold_transform/_0xf79d226779bd62411a32bd58b4abc2d5.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 531, in run
+    shutil.move(hashfile_unfinished, hashfile_unfinished.replace("_unfinished", ""))
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 571, in move
+    copy_function(src, real_dst)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_02_wf/bold_bold_trans_wf/bold_transform/_0xf79d226779bd62411a32bd58b4abc2d5_unfinished.json'
+
+221026-16:08:00,561 nipype.workflow ERROR:
+	 Node bold_transform failed to run on host qnode0415.
+221026-16:08:00,599 nipype.workflow ERROR:
+	 Saving crash info to /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep/fmriprep/sub-f10012/log/20221026-151319_0d7b4ea3-cf8e-4145-96fb-bac6743cecb7/crash-20221026-160800-sir8526-bold_transform-0b3c7866-e2b6-46e6-be34-cc139a124119.txt
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 557, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_01_wf/bold_bold_trans_wf/bold_transform/_0xe4542bf9e605ca36589f787a3b2f7ec4_unfinished.json' -> '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_01_wf/bold_bold_trans_wf/bold_transform/_0xe4542bf9e605ca36589f787a3b2f7ec4.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 531, in run
+    shutil.move(hashfile_unfinished, hashfile_unfinished.replace("_unfinished", ""))
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 571, in move
+    copy_function(src, real_dst)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_01_wf/bold_bold_trans_wf/bold_transform/_0xe4542bf9e605ca36589f787a3b2f7ec4_unfinished.json'
+
+221026-16:08:02,430 nipype.workflow ERROR:
+	 Node bold_transform failed to run on host qnode0415.
+221026-16:08:02,435 nipype.workflow ERROR:
+	 Saving crash info to /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep/fmriprep/sub-f10012/log/20221026-151319_0d7b4ea3-cf8e-4145-96fb-bac6743cecb7/crash-20221026-160802-sir8526-bold_transform-330ad84b-4b34-4421-83fd-88b630c86d12.txt
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 557, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_04_wf/bold_bold_trans_wf/bold_transform/_0x691fc6bb8fddadc89add1ad0e6c51ded_unfinished.json' -> '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_04_wf/bold_bold_trans_wf/bold_transform/_0x691fc6bb8fddadc89add1ad0e6c51ded.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 531, in run
+    shutil.move(hashfile_unfinished, hashfile_unfinished.replace("_unfinished", ""))
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 571, in move
+    copy_function(src, real_dst)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_04_wf/bold_bold_trans_wf/bold_transform/_0x691fc6bb8fddadc89add1ad0e6c51ded_unfinished.json'
+
+221026-16:08:02,475 nipype.workflow ERROR:
+	 Node bold_transform failed to run on host qnode0415.
+221026-16:08:02,481 nipype.workflow ERROR:
+	 Saving crash info to /projects/b1108/studies/foundations/data/processed/neuroimaging/fmriprep/fmriprep/sub-f10012/log/20221026-151319_0d7b4ea3-cf8e-4145-96fb-bac6743cecb7/crash-20221026-160802-sir8526-bold_transform-605a8794-7512-47bb-b166-65b9d5aa5198.txt
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 557, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_03_wf/bold_bold_trans_wf/bold_transform/_0x624bba196814e9eff42da0eb63a37be1_unfinished.json' -> '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_03_wf/bold_bold_trans_wf/bold_transform/_0x624bba196814e9eff42da0eb63a37be1.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/plugins/multiproc.py", line 67, in run_node
+    result["result"] = node.run(updatehash=updatehash)
+  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/pipeline/engine/nodes.py", line 531, in run
+    shutil.move(hashfile_unfinished, hashfile_unfinished.replace("_unfinished", ""))
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 571, in move
+    copy_function(src, real_dst)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/miniconda/lib/python3.7/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/b1108/studies/foundations/data/processed/neuroimaging/work/fmriprep_wf/single_subject_f10012_wf/func_preproc_ses_1_task_rest_run_03_wf/bold_bold_trans_wf/bold_transform/_0x624bba196814e9eff42da0eb63a37be1_unfinished.json'
+
+slurmstepd: error: *** JOB 5180477 ON qnode0415 CANCELLED AT 2022-10-28T15:18:34 DUE TO TIME LIMIT ***
