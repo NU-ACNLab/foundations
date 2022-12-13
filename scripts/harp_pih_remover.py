@@ -13,7 +13,7 @@ partic_path_dict = {}
                     none
 '''
 def list_participants():
-    work_dir = "/projects/b1108/data/Georgia/transitions/derivatives/work"
+    work_dir = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work"
     for partic in os.listdir(work_dir):
         if(partic[0:5] == "sub-f"):
             fpartic = partic.split("-")[1]
@@ -50,7 +50,7 @@ def makedir(participant, directory):
         os.mkdir(directory + "/anat/")
     if(not os.path.exists(directory + "/fmap/")):
         os.mkdir(directory + "/fmap/")
-        
+
 '''
     Renames files all per the file renaming document from Nina
             Parameters:
