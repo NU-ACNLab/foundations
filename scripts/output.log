@@ -6,7 +6,102 @@ The following have been reloaded with a version change:
 ------------------------------------------------------------
 BIDSKIT 2022.10.13
 ------------------------------------------------------------
-* sourcedata folder not found in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata
-* bidskit expects this folder to exist and contain DICOM series
-* Please see the bidskit documentation at
-* https://github.com/jmtyszka/bidskit/blob/master/docs/QuickStart.md
+
+Check dcm2nixx version
+dcm2niix v1.0.20220720 detected - ok
+
+Initializing BIDS dataset directory tree in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids
+Creating file templates required for BIDS compliance
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/README.md to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/README.md
+* {tpl_pname} not found - check installation folder permissions
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/CHANGES to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/CHANGES
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/dataset_description.json to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/dataset_description.json
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/participants.json to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/participants.json
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/bidsignore to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/.bidsignore
+
+Subjects to convert        : All
+Source data directory      : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata
+Working Directory          : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit
+Use Session Directories    : Yes
+Overwrite Existing Files   : No
+Anonymize BIDS Output      : Yes
+Auto translate             : No
+Bind fieldmaps             : No
+GZIP compression           : o
+Recon filename key         : False
+Part filename key          : False
+Echo filename key          : False
+
+------------------------------------------------------------
+Pass 2 : Populating BIDS directory
+------------------------------------------------------------
+  Creating subject list from sourcedata contents
+  Found 4 subjects in sourcedata folder
+
+------------------------------------------------------------
+Processing subject f11052
+------------------------------------------------------------
+  Processing session 1
+  Working subject directory : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit/sub-f11052
+  Working session directory : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit/sub-f11052/ses-1
+  BIDS subject directory  : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-f11052
+  BIDS session directory  : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-f11052/ses-1
+  Sorting series by acquisition time
+  Preserving conversion directory
+  Processing session s5835
+  Working subject directory : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit/sub-f11052
+  Working session directory : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit/sub-f11052/ses-s5835
+  BIDS subject directory  : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-f11052
+  BIDS session directory  : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-f11052/ses-s5835
+  Converting all DICOM images in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata/f11052/s5835
+* No DICOM header information found in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata/f11052/s5835
+* Confirm that DICOM images in this folder are uncompressed
+* Exiting
+
+------------------------------------------------------------
+BIDSKIT 2022.10.13
+------------------------------------------------------------
+
+Check dcm2nixx version
+dcm2niix v1.0.20220720 detected - ok
+
+Initializing BIDS dataset directory tree in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids
+Creating file templates required for BIDS compliance
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/README.md to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/README.md
+* {tpl_pname} not found - check installation folder permissions
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/CHANGES to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/CHANGES
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/dataset_description.json to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/dataset_description.json
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/participants.json to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/participants.json
+Copying /home/sir8526/.local/lib/python3.8/site-packages/bidskit/templates/bidsignore to /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/.bidsignore
+
+Subjects to convert        : All
+Source data directory      : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata
+Working Directory          : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit
+Use Session Directories    : Yes
+Overwrite Existing Files   : No
+Anonymize BIDS Output      : Yes
+Auto translate             : No
+Bind fieldmaps             : No
+GZIP compression           : o
+Recon filename key         : False
+Part filename key          : False
+Echo filename key          : False
+
+------------------------------------------------------------
+Pass 2 : Populating BIDS directory
+------------------------------------------------------------
+  Creating subject list from sourcedata contents
+  Found 4 subjects in sourcedata folder
+
+------------------------------------------------------------
+Processing subject f11052
+------------------------------------------------------------
+  Processing session 1
+  Working subject directory : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit/sub-f11052
+  Working session directory : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/work/bidskit/sub-f11052/ses-1
+  BIDS subject directory  : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-f11052
+  BIDS session directory  : /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-f11052/ses-1
+  Converting all DICOM images in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata/f11052/1
+* No DICOM header information found in /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata/f11052/1
+* Confirm that DICOM images in this folder are uncompressed
+* Exiting
