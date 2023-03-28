@@ -4,7 +4,7 @@
 #SBATCH -p short
 #SBATCH -t 1:00:00
 #SBATCH --mem=2G
-#SBATCH -J t_nifti
+#SBATCH -J f_nifti
 
 module purge
 module load dcm2niix
@@ -16,6 +16,14 @@ echo $SUB
 
 scan_folders=/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sourcedata/$DIR/*
 echo $scan_folders
+
+if [ ! -d "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-$SUB" ]; then
+    mkdir /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-$SUB
+fi
+if [ ! -d "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-$SUB/ses-1" ]; then
+    mkdir /projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-$SUB/ses-1     
+fi
+
 
 for SCAN in $scan_folders; do # Whitespace-safe but not recursive.
     echo $SCAN
