@@ -4,7 +4,7 @@ import os
 import sys
 
 
-partic_path_dict = {}
+participant = sys.argv[1]
 '''
     Creates a dictionary of participants and file paths.
             Parameters:
@@ -15,10 +15,11 @@ partic_path_dict = {}
 def list_participants():
     work_dir = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/rename"
     for partic in os.listdir(work_dir):
-        if(partic[0:5] == "sub-f"):
+        if(partic[0:5] == "sub-t"):
+            print(partic)
             fpartic = partic.split("-")[1]
             path = work_dir + "/" + partic + "/ses-1"
-            partic_path_dict[fpartic] = path
+            #partic_path_dict[fpartic] = path
         
 '''
     Removes participant name from file names. 
@@ -157,6 +158,7 @@ def rename_partic(participant, directory):
 '''   
 def move_to_folders(participant, directory):
     #move functional files
+    print("in move to folders")
     func_pattern = "sub-"+ participant + "_ses-1_task*"
     func_files = glob.glob(directory + "/" + func_pattern)
     for file in func_files:
@@ -180,29 +182,18 @@ def move_to_folders(participant, directory):
 
 
 def main():
-    #asks user to input a directory
-    path = input("Please enter the directory, without quotes:\n")
-    
-    #try:
-    list_participants()
-    #except:
-        #print("Partic dict failed to be created.")
-        #sys.exit()
-    for key, value in partic_path_dict.items():
-        remove_name(key, value)
-        makedir(key, value)
-        rename_partic(key, value)
-        move_to_folders(key, value)
+    key = participant
+    value = "/projects/b1108/studies/foundations/data/raw/neuroimaging/bids/sub-" + participant + "/ses-1" 
+    remove_name(key, value)
+    makedir(key, value)
+    rename_partic(key, value)
+    move_to_folders(key, value)
 
-    #try:
-        #makedir(participant, directory)
-        #rename_partic(participant, directory)
-        #move_to_folders(participant, directory)
-    #except:
-        #print("Rename files failed for " + participant)
+
 
 if __name__ == "__main__":
     main()
+
 
 
 
